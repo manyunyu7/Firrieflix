@@ -13,10 +13,10 @@ open class BaseActivity : AppCompatActivity() {
         Toast.makeText(applicationContext,this,Toast.LENGTH_LONG).show()
     }
 
-    fun View.ViewVisible(){
+    fun View.MakeViewVisible(){
         this.visibility = View.VISIBLE
     }
-    fun View.ViewGone(){
+    fun View.MakeViewGone(){
         this.visibility = View.GONE
     }
 

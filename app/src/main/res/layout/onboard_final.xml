@@ -10,17 +10,20 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-
-        <com.google.android.material.button.MaterialButton
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_gravity="center"
+            android:id="@+id/animationView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="40dp"
-            android:backgroundTint="@color/purple"
-            android:text="@string/start"
-            android:textColor="@color/white"
-            app:cornerRadius="20dp" />
+            android:layout_height="350dp"
+            app:lottie_fileName="panda.json"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+
     </LinearLayout>
 
 
