@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_night"
+    tools:context=".view.WalkthroughActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/container_text"
+        android:gravity="center"
+        android:layout_alignParentTop="true">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/container_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/container_bottom"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/label_title_jargon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            tools:text="Judul Jargon Ditulis Disini" />
+
+        <TextView
+            android:id="@+id/label_desc_jargon"
+            android:layout_width="match_parent"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textSize="23sp"
+            android:textColor="@color/white"
+            tools:text="Deskripsi Motto Ditulis Disini " />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <me.relex.circleindicator.CircleIndicator3
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                app:ci_drawable="@drawable/ic_brightness_1_black_24dp"
+                app:ci_drawable_unselected="@drawable/ic_brightness_1_grey_24dp"
+                app:ci_gravity="start"
+                app:ci_height="5dp" />
+
+            <TextView
+                android:id="@+id/btn_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:textAlignment="viewEnd"
+                android:paddingEnd="20dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="@string/skip"
+                android:textColor="@color/white"
+                android:drawableTint="@color/white"
+                android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Firrieflix</string>
+
+    <string name="subtitle1">We are here to help you with an Android Source code</string>
+    <string name="get_started">GET STARTED</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">Skip</string>
+    <string name="start">START</string>
+
+</resources>
