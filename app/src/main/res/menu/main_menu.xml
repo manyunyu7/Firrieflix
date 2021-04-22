@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_icon_menu_movie"
+        android:title="@string/movie" />
+    <item
+        android:id="@+id/navigation_show"
+        android:icon="@drawable/ic_icon_menu_show"
+        android:title="@string/show" />
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_icon_menu_profile"
+        android:title="@string/profile" />
+</menu>

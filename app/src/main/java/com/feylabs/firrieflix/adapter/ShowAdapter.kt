@@ -8,33 +8,22 @@ import com.bumptech.glide.Glide
 import com.feylabs.firrieflix.R
 import com.feylabs.firrieflix.databinding.ItemMovieBinding
 import com.feylabs.firrieflix.model.MovieModel
+import com.feylabs.firrieflix.model.ShowModel
 
-class MovieAdapter : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>()  {
+class ShowAdapter : RecyclerView.Adapter<ShowAdapter.ShowViewHolder>()  {
 
-    val listMovie = mutableListOf<MovieModel>()
+    val listMovie = mutableListOf<ShowModel>()
 
-    lateinit var movieInterface: MovieInterface
-
-    fun setData(setterMovie : MutableList<MovieModel>){
+    fun setData(setterMovie : MutableList<ShowModel>){
         listMovie.clear()
         listMovie.addAll(setterMovie)
         notifyDataSetChanged()
     }
 
-    fun setMyMovieInterface(interfaceMovie : MovieInterface){
-        this.movieInterface=interfaceMovie
-    }
-
-
-    inner class MovieViewHolder(view: View) : RecyclerView.ViewHolder(view){
+    inner class ShowViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val vbind = ItemMovieBinding.bind(view)
 
-        fun bind(model: MovieModel){
-
-            vbind.root.setOnClickListener {
-                movieInterface.onclick()
-            }
-
+        fun bind(model: ShowModel){
             vbind.apply {
                 labelMovieTitle.text = model.title
                 labelMovieDesc.text=model.description
@@ -50,20 +39,16 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>()  {
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShowViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_movie,parent,false)
-        return  MovieViewHolder(view)
+        return  ShowViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ShowViewHolder, position: Int) {
         holder.bind(listMovie[position])
     }
 
     override fun getItemCount(): Int {
         return listMovie.size
-    }
-
-    interface MovieInterface{
-        fun onclick()
     }
 }

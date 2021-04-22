@@ -1,6 +1,6 @@
 package com.feylabs.firrieflix.model
 
-data class MovieModel(
+data class ShowModel(
     val id : Int,
     val type : MovieType,
     val title : String,
@@ -8,7 +8,7 @@ data class MovieModel(
     val theme : String = "",
     val releaseDate : String,
     val imbdRating : String,
-    val img_link : Int,
+    val img_link : String,
     val director : String,
     val artist : ArrayList<Artist>
 ){

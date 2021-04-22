@@ -22,5 +22,11 @@
         <item name="colorOnPrimary">@color/black</item>
     </style>
 
+    <style name="circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+        <item name="cornerSize">2%</item>
+    </style>
+
 
 </resources>

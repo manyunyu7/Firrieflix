@@ -41,12 +41,10 @@ class WalkthroughActivity : BaseActivity() {
 
 
     private fun setUpLayoutBinding() {
-
         vbind.btnSkip.setOnClickListener {
             startActivity(Intent(this,DashboardActivity::class.java))
             finish()
         }
-
     }
 
     private fun setUpViewPager() {
@@ -56,6 +54,7 @@ class WalkthroughActivity : BaseActivity() {
         vbind.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
+                setUpLayoutBinding()
 
                 val arrayTitle =
                     arrayListOf<String>("Best Film", "Staycation Mate", "Access from anywhere")

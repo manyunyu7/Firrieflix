@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/myDarkPurple"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:padding="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/containerCover"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        app:cardCornerRadius="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/img_cover"
+            android:contentDescription="@string/def"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/poster_infinity_war"
+            android:scaleType="fitXY"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_marginStart="14dp"
+        android:layout_toEndOf="@id/containerCover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/label_movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Judul Film Disini"
+            android:textStyle="bold"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/label_movie_director"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Film By Muhammad Firriezky"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/colorWhite"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/label_movie_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="20/20/2021"
+            android:fontFamily="@font/ambit_regular"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"/>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorWhite"/>
+
+        <TextView
+            android:id="@+id/label_movie_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:ellipsize="end"
+            tools:text="Film Description Here"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"/>
+    </LinearLayout>
+</RelativeLayout>

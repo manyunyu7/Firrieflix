@@ -8,5 +8,9 @@
     <string name="start">START</string>
     <string name="start_app">Start Application</string>
     <string name="skip">Skip</string>
+    <string name="def">This is an image , ask help for someone if you need explanation</string>
+    <string name="movie">Movie</string>
+    <string name="show">Show</string>
+    <string name="profile">Profile</string>
 
 </resources>

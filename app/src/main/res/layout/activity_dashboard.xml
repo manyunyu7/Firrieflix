@@ -8,22 +8,21 @@
     tools:context=".view.DashboardActivity">
 
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/view_pager"
-        android:layout_above="@id/tab_layout"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_movie"
+        android:layout_above="@id/movie_bottom_menu"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bottom_rounded"
-        android:backgroundTint="@color/myDarkPurple"
-        >
-
-    </androidx.viewpager2.widget.ViewPager2>
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/movie_navigation" />
 
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_layout"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/movie_bottom_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/main_menu" />
 
 </RelativeLayout>
